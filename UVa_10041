@@ -1,0 +1,26 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int n,r,T,A[999],sum,select;
+	cin>>T;
+	while(T--){
+	    cin>>n;
+	    for(int i=0;i<n;i++){
+
+	        cin>>A[i];
+
+	    }
+	    sort(A,A+n);
+	    select=A[n/2];
+	    sum=0;
+	    for(int i=0;i<n;i++){
+	        sum+=abs(select-A[i]);
+
+	    }
+	    std::cout << sum << std::endl;
+
+	}
+  return 0;
+}
